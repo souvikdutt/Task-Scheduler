@@ -1,0 +1,246 @@
+@charset "ISO-8859-1";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  font-family: Mukta, sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #4f546c;
+  font-size: 0.9rem;
+  background-color: #f9fbff;
+}
+
+.nav{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 20px 45px;
+    box-sizing: border-box;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: calibri;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nav .message{
+	color: #80ff00;
+	font-size: 20px;
+	font-weight: normal;
+	font-family: calibri;
+}
+.nav span{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: cursive;
+    color: #000000;
+    font-weight: bold;
+}
+.nav a{
+    text-decoration: none;
+    color: #004080;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 3px solid rgb(202, 238, 71);
+    padding: 10px;
+    border-radius: 3px;
+}
+.nav a:hover{
+    border: 3px solid rgb(118, 238, 71);
+}
+#taskid{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+table { 
+	margin-top: 5px;
+	border-collapse: collapse; 
+	box-shadow: 0 5px 10px #e1e5ee;
+  	background-color: white;
+  	overflow: hidden;
+  	text-align: left;
+}
+
+thead {
+   	box-shadow: 0 5px 10px #e1e5ee;
+}
+
+/* Zebra striping */
+tr:nth-of-type(even) { 
+	background: #f4f6fb; 
+}
+
+th { 
+	padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+td { 
+	padding: 1rem 2rem;
+}
+
+td a{
+	text-decoration: none;
+}
+
+ .status {
+    border-radius: 0.2rem;
+    background-color: red;
+    padding: 0.2rem 1rem;
+    text-align: center;
+}  
+.status-view {
+  background-color: #c8e6c9;
+  color: #388e3c;
+}
+ .status-update {
+  background-color: #fff0c2;
+  color: #a68b00;	
+}
+ .status-delete {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+ 
+.go_back a{
+	text-decoration: none;
+	padding: 7px;
+	margin-top: 20px;
+	position: absolute;
+	background-color: dodgerblue;
+	color: white;
+	border-radius: 5px;
+}
+ 
+.footer{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: #d6d6d6;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.footer span{
+    margin-right: 2%;
+}
+form {
+  outline: 0;
+  float: left;
+  
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+form > .textbox {
+  outline: 0;
+  height: 32px;
+  width: 160px;
+  line-height: 42px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border: 0;
+  float: left;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+form > .textbox:focus {
+  outline: 0;
+  background-color: #FFF;
+}
+
+form > .button {
+  outline: 0;
+  background: none;
+  background-color: dodgerblue;
+  float: left;
+  height: 32px;
+  width: 72px;
+  text-align: center;
+  line-height: 42px;
+  border: 0;
+  color: #FFF;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 16px;
+  text-rendering: auto;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+form > .button:hover {
+  background-color: orange;
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
